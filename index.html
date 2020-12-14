@@ -36,7 +36,7 @@
     h1 {
       font-weight: 300;
       text-align: center;
-      animation: loop 5s linear infinite;
+      animation: loop 5s linear infinite, breathe 15s linear infinite;
       font-size: calc(24px + (60 - 24) * ((100vw - 330px) / (1600 - 330)));
       text-shadow: 0px 1px 10px rgba(0, 0, 0, .3);
     }
@@ -66,6 +66,21 @@
 
       100% {
         color: #fff;
+      }
+    }
+
+    @keyframes breathe {
+      0% {
+        transform: scale(1);
+        letter-spacing: normal;
+      }
+      8% {
+        transform: scale(1.1);
+        letter-spacing: .05em;
+      }
+      100% {
+        transform: scale(1);
+        letter-spacing: normal;
       }
     }
 
